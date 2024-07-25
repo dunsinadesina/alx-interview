@@ -1,11 +1,14 @@
 #!/usr/bin/python3
-"""UTF-8 validation"""
+"""
+UTF-8 Validation
+"""
 
 
 def validUTF8(data):
     """
     data: list of integers
-    Return: true if data is valid or false
+    Return: True if data is a valid UTF-8
+    encoding, else return False
     """
     byte_count = 0
 
@@ -23,4 +26,4 @@ def validUTF8(data):
             if i >> 6 != 0b10:
                 return False
             byte_count -= 1
-        return byte_count == 0
+    return byte_count == 0
